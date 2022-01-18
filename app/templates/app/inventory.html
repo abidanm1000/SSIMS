@@ -1,0 +1,20 @@
+﻿{% extends "app/layout.html" %}
+
+{% block content %}
+
+<h2><strong>{{ title }}</strong></h2>
+<p style="font-size: 2em"><a href="{% url 'addInventory' %}">Create inventory</a></p>
+
+{% for inventory in inventory %}
+
+<div class="row">
+    <div style="padding-left:18px">
+        <a href="/inventory/{{ inventory.id }}">
+        {{ inventory.id }} --- {{ inventory.item_name }} --- {{ inventory.quantity }}
+        </a>
+    </div>
+</div>
+
+{% endfor %}
+
+{% endblock %}

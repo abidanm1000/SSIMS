@@ -1,0 +1,18 @@
+﻿{% extends "app/layout.html" %}
+
+{% block content %}
+
+<h2>Customer Details</h2>
+
+<div class="row">
+    <div class="col-md-3">
+     Company --- {{ customers.company_name }} <br />
+     First Name --- {{ customers.first_name }} <br />
+     Last Name --- {{ customers.last_name }} <br />
+     Billing Address --- {{ customers.billing_address }}<br />
+     Phone Number --- {{ customers.phone }}<br />
+     Email --- {{ customers.email }}
+    </div>
+</div>
+
+{% endblock %}

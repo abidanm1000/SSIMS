@@ -1,0 +1,17 @@
+﻿{% extends "app/layout.html" %}
+
+{% block content %}
+
+<h2>Inventory Item Details</h2>
+
+<div class="row">
+    <div class="col-md-3">
+     Inventory # --- {{ inventory.id }} <br />
+     Item Name --- {{ inventory.item_name }}<br />
+     Quantity --- {{ inventory.quantity }}<br />
+     Expiration --- {{ inventory.expiration }}<br />
+     Item Price --- {{ inventory.item_price }}
+    </div>
+</div>
+
+{% endblock %}

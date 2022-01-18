@@ -1,0 +1,16 @@
+﻿{% extends "app/layout.html" %}
+
+{% block content %}
+
+<h2>Vendor Details</h2>
+
+<div class="row">
+    <div class="col-md-3">
+     Company --- {{ vendors.company_name }} <br />
+     Payment Address --- {{ vendors.payment_address }}<br />
+     Phone Number --- {{ vendors.phone }}<br />
+     Email --- {{ vendors.email }}
+    </div>
+</div>
+
+{% endblock %}

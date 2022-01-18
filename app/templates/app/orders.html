@@ -1,0 +1,20 @@
+﻿{% extends "app/layout.html" %}
+
+{% block content %}
+
+<h2><strong>{{ title }}</strong></h2>
+<p style="font-size: 2em"><a href="{% url 'addOrders' %}">Create order</a></p>
+
+{% for orders in orders %}
+
+<div class="row">
+    <div style="padding-left:18px">
+        <a href="/orders/{{ orders.id }}">
+        {{ orders.id }} --- {{ orders.customer_id }} --- {{ orders.delivery_date }}
+        </a>
+    </div>
+</div>
+
+{% endfor %}
+
+{% endblock %}

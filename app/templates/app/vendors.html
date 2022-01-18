@@ -1,0 +1,20 @@
+﻿{% extends "app/layout.html" %}
+
+{% block content %}
+
+<h2><strong>{{ title }}</strong></h2>
+<p style="font-size: 2em"><a href="{% url 'addVendors' %}">Create vendor</a></p>
+
+{% for vendors in vendors %}
+
+<div class="row">
+    <div style="padding-left:18px">
+        <a href="/vendors/{{ vendors.id }}">
+        {{ vendors.id }} --- {{ vendors.company_name }}
+        </a>
+    </div>
+</div>
+
+{% endfor %}
+
+{% endblock %}

@@ -1,0 +1,20 @@
+﻿{% extends "app/layout.html" %}
+
+{% block content %}
+
+<h2><strong>{{ title }}</strong></h2>
+<p style="font-size: 2em"><a href="{% url 'addInvoices' %}">Create invoice</a></p>
+
+{% for invoices in invoices %}
+
+<div class="row">
+    <div style="padding-left:18px">
+        <a href="/invoices/{{ invoices.id }}">
+        {{ invoices.id }} --- {{ invoices.orders_id }} --- {{ invoices.due_date }}
+        </a>
+    </div>
+</div>
+
+{% endfor %}
+
+{% endblock %}

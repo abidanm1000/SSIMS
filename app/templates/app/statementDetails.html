@@ -1,0 +1,18 @@
+﻿{% extends "app/layout.html" %}
+
+{% block content %}
+
+<h2>Statement Details</h2>
+
+<div class="row">
+    <div class="col-md-3">
+     Company --- {{ statements.company_name }}<br />
+     Billing Address --- {{ statements.billing_address }}<br />
+     Phone --- {{ statements.phone }}<br />
+     Due Date --- {{ statements.due_date }}<br />
+     Total Price --- {{statements.total_price }}<br />
+     Paid --- {{statements.paid_status }}
+    </div>
+</div>
+
+{% endblock %}

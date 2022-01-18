@@ -1,0 +1,19 @@
+﻿{% extends "app/layout.html" %}
+
+{% block content %}
+
+<h2>Order Details</h2>
+
+<div class="row">
+    <div class="col-md-3">
+     Order # --- {{ orders.id }}<br />
+     Company --- {{ orders.customer_id }} <br />
+     Purchaser Name --- {{ orders.purchaser_name }} <br />
+     Shipping Address --- {{ orders.shipping_address }}<br />
+     Item --- {{ orders.inventory_id }}<br />
+     Quantity --- {{ orders.quantity }}<br />
+     Delivery Date --- {{ orders.delivery_date }}
+    </div>
+</div>
+
+{% endblock %}
